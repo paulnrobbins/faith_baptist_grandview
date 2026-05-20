@@ -16,9 +16,9 @@
   --color-accent:       #A0341E;     /* Cumberland-clay red */
   --color-line:         rgb(28 31 26 / 0.10);
 
-  /* — Type families (set by next/font in layout.tsx) — */
+  /* — Type families (set by next/font + geist package in layout.tsx) — */
   --font-display:       var(--font-fraunces);
-  --font-body:          var(--font-geist);
+  --font-body:          var(--font-geist-sans);
   --font-mono:          var(--font-geist-mono);
 
   /* — Editorial spacing scale — */

@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from 'next';
-import { Fraunces, Geist, Geist_Mono } from 'next/font/google';
+import { Fraunces } from 'next/font/google';
+import { GeistSans } from 'geist/font/sans';
+import { GeistMono } from 'geist/font/mono';
 import { Providers } from '@/components/layout/Providers';
 import { Nav } from '@/components/layout/Nav';
 import { meta, church } from '@/lib/content';
@@ -7,26 +9,17 @@ import './globals.css';
 
 /* ============================================================
    FONTS — locked per Phase 1 brief §4
-   Fraunces (display) + Geist (body) + Geist Mono (captions)
+   Fraunces (display) via next/font/google
+   Geist + Geist Mono (body + caption) via the official `geist`
+   package (Vercel-published, self-hosted — more reliable than
+   the Google Fonts CDN, which has periodic 404s for Geist).
    All SIL OFL, free for production use.
    ============================================================ */
 const fraunces = Fraunces({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-fraunces',
-  axes: ['SOFT', 'WONK', 'opsz'],
-});
-
-const geist = Geist({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-geist',
-});
-
-const geistMono = Geist_Mono({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-geist-mono',
+  axes: ['SOFT', 'WONK'],
 });
 
 /* ============================================================
@@ -112,7 +105,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${geist.variable} ${geistMono.variable}`}
+      className={`${fraunces.variable} ${GeistSans.variable} ${GeistMono.variable}`}
     >
       <head>
         <script
