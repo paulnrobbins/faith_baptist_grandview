@@ -49,6 +49,9 @@ export function bootLenis(): () => void {
 }
 
 /** Programmatic scroll — used by nav links. */
-export function scrollTo(target: string | number, opts?: { offset?: number; duration?: number }) {
+export function scrollTo(
+  target: string | number | HTMLElement,
+  opts?: { offset?: number; duration?: number },
+) {
   lenisInstance?.scrollTo(target, opts);
 }
