@@ -1,0 +1,116 @@
+@import './tokens.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   BASE RESET — minimal, intentional
+   ============================================================ */
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    /* The page bg sits on the html element so the canvas (z-index: -10)
+       paints between it and the content. Without this, body's own
+       background color would occlude the 3D scene. */
+    background-color: var(--color-bg);
+    /* Lenis manages scroll, so we disable native smooth-scroll
+       to avoid double-easing. */
+    scroll-behavior: auto;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: transparent;
+    color: var(--color-fg);
+    font-family: var(--font-body);
+    font-feature-settings: 'ss01', 'cv02', 'cv11';
+    overflow-x: hidden;
+  }
+
+  /* Display type uses Fraunces with editorial defaults. */
+  .font-display {
+    font-family: var(--font-display);
+    font-feature-settings: 'ss01';
+    font-variation-settings: 'opsz' 144, 'SOFT' 50, 'WONK' 0;
+  }
+
+  /* Italic display uses Fraunces with extra warmth (WONK on, soft up). */
+  .font-display-italic {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-variation-settings: 'opsz' 144, 'SOFT' 100, 'WONK' 1;
+  }
+
+  /* Mono caption — uppercase tracking, signals editorial integrity. */
+  .caption-mono {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    line-height: 1;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-fg-muted);
+  }
+
+  /* Selection */
+  ::selection {
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+  }
+
+  /* Focus — keyboard-only, accessible */
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+/* ============================================================
+   EDITORIAL UTILITIES
+   ============================================================ */
+@layer utilities {
+  .hairline-top    { border-top: 1px solid var(--color-line); }
+  .hairline-bottom { border-bottom: 1px solid var(--color-line); }
+  .hairline-y      { border-top: 1px solid var(--color-line); border-bottom: 1px solid var(--color-line); }
+
+  /* Documentary container — generous margins, mobile-aware. */
+  .container-editorial {
+    width: 100%;
+    max-width: 88rem;
+    margin-inline: auto;
+    padding-inline: var(--space-gutter);
+  }
+
+  /* Reduced-motion respects — kill animations + transitions */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* ============================================================
+   ACCESSIBILITY / NO-JS SAFETY NET
+   If reduced-motion is requested OR JavaScript is disabled,
+   all scroll-revealed elements must remain visible by default.
+   Without this, opacity-0 starting states would persist forever
+   and content would be invisible to crawlers + a11y users.
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  [data-anim],
+  [data-s2], [data-s3], [data-s4], [data-s5], [data-s6],
+  [data-ministry-photo], [data-ministry-text] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
