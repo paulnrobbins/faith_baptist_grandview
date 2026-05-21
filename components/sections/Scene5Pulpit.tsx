@@ -155,26 +155,6 @@ export function Scene5Pulpit() {
       className="relative py-[var(--space-section)] bg-bg overflow-hidden"
     >
       <div className="container-editorial">
-        {/* MASSIVE "05" NUMERAL */}
-        <div
-          data-s5="numeral"
-          className="opacity-0 flex items-start gap-4 mb-8 md:mb-10"
-        >
-          <span
-            className="font-display text-fg leading-[0.85] tracking-[-0.04em] select-none"
-            style={{ fontSize: 'clamp(5rem, 16vw, 12rem)' }}
-            aria-hidden
-          >
-            05
-          </span>
-          <span
-            data-s5="caption"
-            className="opacity-0 caption-mono mt-3 md:mt-5 max-w-[14ch]"
-          >
-            {scene5.caption}
-          </span>
-        </div>
-
         {/* ATMOSPHERE PHOTO + HEADLINE — 5/7 editorial split */}
         <div className="grid md:grid-cols-12 gap-10 md:gap-12 items-start mb-20 md:mb-28">
           <figure
@@ -190,9 +170,6 @@ export function Scene5Pulpit() {
                 className="object-cover will-change-transform scale-105"
               />
             </div>
-            <figcaption className="caption-mono text-fg-muted leading-snug">
-              {scene5.atmospherePhotoCaption}
-            </figcaption>
           </figure>
 
           <div className="md:col-span-7 flex flex-col gap-6 md:pt-4">
@@ -234,27 +211,12 @@ export function Scene5Pulpit() {
                       className="object-cover will-change-transform scale-105"
                     />
                   </div>
-                  <figcaption className="caption-mono text-fg-muted leading-snug mt-3">
-                    {m.name} — Faith Baptist Grandview
-                  </figcaption>
                 </figure>
 
                 <div
                   data-ministry-text
                   className={`md:col-span-6 flex flex-col gap-6 md:pt-2 ${isOdd ? 'md:order-1' : ''}`}
                 >
-                  {/* OVERSIZED MINISTRY NUMERAL — matches scene numeral style */}
-                  <div data-card-line className="flex items-baseline gap-4">
-                    <span
-                      className="font-display text-fg leading-[0.85] tracking-[-0.03em]"
-                      style={{ fontSize: 'clamp(3rem, 7vw, 5.5rem)' }}
-                      aria-hidden
-                    >
-                      0{index + 1}
-                    </span>
-                    <span className="caption-mono text-accent">Ministry</span>
-                  </div>
-
                   <h3
                     data-card-line
                     className="font-display text-display-md text-fg leading-[1.0]"

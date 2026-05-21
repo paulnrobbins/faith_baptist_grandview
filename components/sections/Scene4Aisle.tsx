@@ -103,26 +103,6 @@ export function Scene4Aisle() {
       className="relative py-[var(--space-section)] bg-bg overflow-hidden"
     >
       <div className="container-editorial">
-        {/* MASSIVE "04" NUMERAL — section marker matching Scene 3's "03" */}
-        <div
-          data-s4="numeral"
-          className="opacity-0 flex items-start gap-4 mb-8 md:mb-10"
-        >
-          <span
-            className="font-display text-fg leading-[0.85] tracking-[-0.04em] select-none"
-            style={{ fontSize: 'clamp(5rem, 16vw, 12rem)' }}
-            aria-hidden
-          >
-            04
-          </span>
-          <span
-            data-s4="caption"
-            className="opacity-0 caption-mono mt-3 md:mt-5 max-w-[14ch]"
-          >
-            {scene4.caption}
-          </span>
-        </div>
-
         {/* AISLE PHOTO — the visual answer to "what's it like inside?" */}
         <figure
           data-s4="photo"
@@ -138,9 +118,6 @@ export function Scene4Aisle() {
               priority={false}
             />
           </div>
-          <figcaption className="caption-mono text-fg-muted mt-3 px-[var(--space-gutter)] md:px-0">
-            {scene4.photoCaption}
-          </figcaption>
         </figure>
 
         {/* HEADLINE + INTRO */}

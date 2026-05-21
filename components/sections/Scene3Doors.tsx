@@ -123,27 +123,10 @@ export function Scene3Doors() {
       />
 
       <div className="container-editorial relative">
-        {/* MASSIVE "03" NUMERAL — section marker, brutalist-borrowed */}
-        <div
-          data-s3="numeral"
-          className="opacity-0 flex items-start gap-4 mb-8 md:mb-12"
-        >
-          <span
-            className="font-display text-fg leading-[0.85] tracking-[-0.04em] select-none"
-            style={{ fontSize: 'clamp(5rem, 16vw, 12rem)' }}
-            aria-hidden
-          >
-            03
-          </span>
-          <span className="caption-mono mt-3 md:mt-5 max-w-[14ch]">
-            {scene3.caption}
-          </span>
-        </div>
-
         {/* FRAMING LINE — the establishing shot of the scene */}
         <p
           data-s3="framing"
-          className="opacity-0 font-display text-display-sm md:text-display-md text-fg leading-[1.1] max-w-[26ch] md:max-w-[34ch] mb-16 md:mb-24"
+          className="opacity-0 font-display text-display-md md:text-display-lg text-fg leading-[1.0] max-w-[26ch] md:max-w-[34ch] mb-16 md:mb-24"
         >
           {scene3.framing}
         </p>
@@ -165,9 +148,6 @@ export function Scene3Doors() {
                 priority={false}
               />
             </div>
-            <figcaption className="caption-mono text-fg-muted leading-snug">
-              {scene3.pastor.photoCaption}
-            </figcaption>
           </figure>
 
           {/* RIGHT COLUMN: identity + testimony stream */}
@@ -227,9 +207,6 @@ export function Scene3Doors() {
                     className="object-cover will-change-transform scale-105"
                   />
                 </div>
-                <figcaption className="caption-mono text-fg-muted leading-snug">
-                  {scene3.pastor.photoSecondaryCaption}
-                </figcaption>
               </figure>
 
               {/* TESTIMONY 3 — the CALLING */}

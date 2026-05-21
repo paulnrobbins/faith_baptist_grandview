@@ -89,14 +89,11 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
-              {values.items.map((v, i) => (
+              {values.items.map((v) => (
                 <article
                   key={v.name}
                   className="flex flex-col gap-3 hairline-top pt-6"
                 >
-                  <span className="caption-mono text-fg-muted">
-                    {String(i + 1).padStart(2, '0')}
-                  </span>
                   <h3 className="font-display text-display-sm text-fg leading-[1.1]">
                     {v.name}
                   </h3>
@@ -111,7 +108,6 @@ export default function AboutPage() {
           {/* BELIEFS PREVIEW — link to full statement-of-faith page */}
           <section className="hairline-y py-12 md:py-16 grid md:grid-cols-12 gap-8 md:gap-12 items-start">
             <div className="md:col-span-7 flex flex-col gap-4">
-              <span className="caption-mono text-accent">Statement of Faith</span>
               <h2 className="font-display text-display-md text-fg leading-[1.0]">
                 Nine articles, grounded in Scripture.
               </h2>
@@ -120,14 +116,10 @@ export default function AboutPage() {
               </p>
             </div>
             <ul className="md:col-span-5 flex flex-col gap-3 md:pt-3">
-              {beliefs.articles.map((article, i) => (
+              {beliefs.articles.map((article) => (
                 <li
                   key={article.heading}
-                  className="flex items-baseline gap-4"
                 >
-                  <span className="caption-mono text-fg-muted shrink-0">
-                    {String(i + 1).padStart(2, '0')}
-                  </span>
                   <span className="font-display text-lead text-fg leading-[1.25]">
                     {article.heading}
                   </span>

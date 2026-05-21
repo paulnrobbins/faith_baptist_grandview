@@ -50,7 +50,9 @@ export const church = {
    ============================================================ */
 export const scene1 = {
   caption: 'Faith Baptist Church · Grandview, TN',
-  headline: 'Jesus can Save You',
+  headline: 'Jesus can save anyone',
+  /* Special-emphasis word from the headline — rendered in italic accent. */
+  emphasisWord: 'anyone',
   /* Three CTAs in the hero. */
   ctaPrimary:   { label: 'Plan Your Visit', href: '#visit' },
   ctaSecondary: { label: 'Get Directions',  href: 'https://www.google.com/maps/dir//358+Happy+Top+Rd,+Grandview,+TN+37337' },
@@ -63,7 +65,6 @@ export const scene1 = {
    SCENE 2 — THE PROMISE (brand statement)
    ============================================================ */
 export const scene2 = {
-  caption: 'Scene 02 — The Promise',
   pullQuote:
     'Come as you are. God meets us in our messiness, walks with us through it, and works in every part of our lives.',
   body:
@@ -79,8 +80,7 @@ export const scene2 = {
    SCENE 3 — THE DOORS OPEN (Pastor Justin Dannel's testimony)
    ============================================================ */
 export const scene3 = {
-  caption: 'Scene 03 — The Doors Open',
-  framing: 'The man who preaches here was delivered from meth addiction. He preaches the gospel that saved him.',
+  framing: 'From Addict to Ambassador',
   pastor: {
     name: 'Justin Dannel',
     role: 'Pastor',
@@ -110,7 +110,6 @@ export const scene3 = {
    SCENE 4 — DOWN THE AISLE (Plan Your Visit)
    ============================================================ */
 export const scene4 = {
-  caption: 'Scene 04 — Plan Your Visit',
   headline: 'Plan Your Visit',
   intro:
     'We\u2019d love to host you. Whatever you\u2019re carrying, you\u2019re welcome here. Here\u2019s what to expect your first Sunday.',
@@ -137,7 +136,6 @@ export const scene4 = {
    SCENE 5 — AT THE PULPIT (Next Steps + Ministries)
    ============================================================ */
 export const scene5 = {
-  caption: 'Scene 05 — At the Pulpit',
   headline: 'The Life of the Church',
   intro:
     'Beyond Sunday morning, Faith Baptist is a community working out faith together. Three ways to get involved \u2014 and watch sermons anytime on Facebook.',
@@ -188,7 +186,6 @@ export const scene5 = {
    SCENE 6 — FACING THE DOORS (Contact + Footer)
    ============================================================ */
 export const scene6 = {
-  caption: 'Scene 06 — Facing the Doors',
   sendingLine:
     'Go home and tell everyone what Jesus has done for you.',
   sendingAttribution: 'Mark 5:19',

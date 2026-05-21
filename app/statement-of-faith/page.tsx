@@ -46,21 +46,14 @@ export default function StatementOfFaithPage() {
 
           {/* 9 articles — open by default since this is the dedicated page */}
           <div className="flex flex-col gap-12 md:gap-16">
-            {beliefs.articles.map((article, i) => (
+            {beliefs.articles.map((article) => (
               <article
                 key={article.heading}
                 className="grid md:grid-cols-12 gap-6 md:gap-10 hairline-top pt-8 md:pt-10"
               >
                 {/* Numeral + heading column */}
-                <div className="md:col-span-4 flex items-start gap-4 md:gap-6">
-                  <span
-                    className="font-display text-fg leading-[0.85] tracking-[-0.03em] select-none"
-                    style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}
-                    aria-hidden
-                  >
-                    {String(i + 1).padStart(2, '0')}
-                  </span>
-                  <h2 className="font-display text-display-sm md:text-display-md text-fg leading-[1.0] mt-2">
+                <div className="md:col-span-4 flex items-start">
+                  <h2 className="font-display text-display-sm md:text-display-md text-fg leading-[1.0]">
                     {article.heading}
                   </h2>
                 </div>

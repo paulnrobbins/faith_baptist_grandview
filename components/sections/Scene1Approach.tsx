@@ -90,17 +90,9 @@ export function Scene1Approach() {
             priority={false}
           />
         </div>
-        <figcaption className="caption-mono text-fg-muted leading-snug">
-          The sign at the gravel road — 358 Happy Top Rd, Grandview
-        </figcaption>
       </figure>
 
       <div className="container-editorial flex flex-col gap-8 md:gap-10">
-        {/* Caption */}
-        <span data-anim="caption" className="caption-mono opacity-0">
-          {scene1.caption}
-        </span>
-
         {/* Headline — words stagger in from below for the loaded-entrance moment */}
         <h1 className="font-display text-display-xl text-fg max-w-[15ch] leading-[0.95]">
           <span className="inline-flex flex-wrap gap-x-[0.25em] gap-y-2">
@@ -110,7 +102,7 @@ export function Scene1Approach() {
                 data-anim="headline-line"
                 className="inline-block opacity-0 will-change-transform"
               >
-                {word === 'Save' ? (
+                {word.toLowerCase() === scene1.emphasisWord.toLowerCase() ? (
                   <span className="font-display-italic text-accent">{word}</span>
                 ) : (
                   word

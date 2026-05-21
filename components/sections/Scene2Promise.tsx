@@ -115,12 +115,10 @@ export function Scene2Promise() {
       ref={rootRef}
       id="promise"
       data-scene="2"
-      className="relative py-[var(--space-section)]"
+      className="relative py-[var(--space-section)] bg-bg"
     >
       <div className="container-editorial grid md:grid-cols-12 gap-8 md:gap-10">
-        <span className="caption-mono md:col-span-2 md:pt-3">{scene2.caption}</span>
-
-        <div className="md:col-span-7 md:col-start-3 flex flex-col gap-8">
+        <div className="md:col-span-7 md:col-start-2 flex flex-col gap-8">
           <blockquote className="font-display-italic text-display-md text-fg leading-[1.05]">
             <span aria-hidden className="text-accent inline-block mr-1">“</span>
             {lines.map((line, i) => (
@@ -159,9 +157,6 @@ export function Scene2Promise() {
               className="object-cover will-change-transform"
             />
           </div>
-          <figcaption className="caption-mono text-fg-muted leading-snug">
-            {scene2.photoCaption}
-          </figcaption>
         </figure>
       </div>
     </section>

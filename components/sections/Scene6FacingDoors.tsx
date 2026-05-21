@@ -82,30 +82,10 @@ export function Scene6FacingDoors() {
       className="relative py-[var(--space-section)] bg-bg overflow-hidden"
     >
       <div className="container-editorial">
-        {/* "06" NUMERAL */}
-        <div
-          data-s6="numeral"
-          className="opacity-0 flex items-start gap-4 mb-8 md:mb-10"
-        >
-          <span
-            className="font-display text-fg leading-[0.85] tracking-[-0.04em] select-none"
-            style={{ fontSize: 'clamp(5rem, 16vw, 12rem)' }}
-            aria-hidden
-          >
-            06
-          </span>
-          <span
-            data-s6="caption"
-            className="opacity-0 caption-mono mt-3 md:mt-5 max-w-[14ch]"
-          >
-            {scene6.caption}
-          </span>
-        </div>
-
         {/* MARK 5:19 SENDING LINE — the "go and tell" moment, centered editorial */}
         <div
           data-s6="sending"
-          className="opacity-0 max-w-[30ch] mx-auto text-center my-16 md:my-24 flex flex-col gap-5"
+          className="opacity-0 max-w-[30ch] mx-auto text-center mb-16 md:mb-24 flex flex-col gap-5"
         >
           <p className="font-display-italic text-display-md md:text-display-lg text-fg leading-[1.0]">
             <span aria-hidden className="text-accent">“</span>
@@ -147,7 +127,7 @@ export function Scene6FacingDoors() {
               className="object-cover will-change-transform scale-105"
             />
           </div>
-          <figcaption className="caption-mono text-fg-muted mt-3 px-[var(--space-gutter)] md:px-0">
+          <figcaption className="sr-only">
             {scene6.closingPhotoCaption}
           </figcaption>
         </figure>
@@ -158,7 +138,6 @@ export function Scene6FacingDoors() {
           className="opacity-0 grid md:grid-cols-12 gap-10 md:gap-12 hairline-y py-12 md:py-16 mb-16 md:mb-24"
         >
           <div className="md:col-span-7 flex flex-col gap-5">
-            <span className="caption-mono text-fg-muted">{scene6.contactHeadline}</span>
             <div className="flex flex-col gap-3">
               <a
                 href={`mailto:${church.contact.email}`}
@@ -184,7 +163,6 @@ export function Scene6FacingDoors() {
           </div>
 
           <div className="md:col-span-5 flex flex-col gap-5">
-            <span className="caption-mono text-fg-muted">Visit in person</span>
             <address className="not-italic font-display text-display-sm text-fg leading-[1.15]">
               {church.address.street}<br />
               {church.address.city}, {church.address.state} {church.address.zip}
@@ -205,7 +183,6 @@ export function Scene6FacingDoors() {
           data-s6="beliefs-intro"
           className="opacity-0 mb-8 md:mb-10 flex flex-col gap-3 max-w-[44ch]"
         >
-          <span className="caption-mono text-accent">What we believe</span>
           <h3 className="font-display text-display-md text-fg leading-[1.05]">
             Statement of Faith
           </h3>
@@ -224,14 +201,9 @@ export function Scene6FacingDoors() {
               {...(i === 0 ? { open: true } : {})}
             >
               <summary className="flex items-center justify-between cursor-pointer list-none gap-6">
-                <div className="flex items-baseline gap-4 md:gap-6">
-                  <span className="caption-mono text-fg-muted">
-                    {String(i + 1).padStart(2, '0')}
-                  </span>
-                  <h4 className="font-display text-display-sm text-fg leading-[1.05]">
-                    {article.heading}
-                  </h4>
-                </div>
+                <h4 className="font-display text-display-sm text-fg leading-[1.05]">
+                  {article.heading}
+                </h4>
                 <span
                   aria-hidden
                   className="caption-mono text-fg shrink-0 transition-transform duration-300 group-open:rotate-45"
@@ -239,7 +211,7 @@ export function Scene6FacingDoors() {
                   +
                 </span>
               </summary>
-              <div className="pt-6 md:pt-7 pl-10 md:pl-14 flex flex-col gap-3 max-w-[64ch]">
+              <div className="pt-6 md:pt-7 flex flex-col gap-3 max-w-[64ch]">
                 <p className="font-body text-body text-fg leading-[1.65]">
                   {article.body}
                 </p>
