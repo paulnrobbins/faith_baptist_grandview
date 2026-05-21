@@ -115,8 +115,21 @@ export function Scene2Promise() {
       ref={rootRef}
       id="promise"
       data-scene="2"
-      className="relative py-[var(--space-section)] bg-[rgba(232,228,220,0.92)] backdrop-blur-sm"
+      className="relative py-[var(--space-section)] overflow-hidden"
     >
+      {/* Subtle bg gradient — same treatment as Scene 3.
+          Transparent at top, soft fog at center where the
+          pull-quote and body live, transparent at bottom so
+          the transition into Scene 3 is seamless. */}
+      <div
+        aria-hidden
+        className="absolute inset-0 -z-[1] pointer-events-none"
+        style={{
+          background:
+            'linear-gradient(180deg, transparent 0%, rgba(232,228,220,0.7) 22%, rgba(232,228,220,0.85) 60%, rgba(232,228,220,0.5) 88%, transparent 100%)',
+        }}
+      />
+
       <div className="container-editorial grid md:grid-cols-12 gap-8 md:gap-10">
         <div className="md:col-span-7 md:col-start-2 flex flex-col gap-8">
           <blockquote className="font-display-italic text-display-md text-fg leading-[1.05]">
