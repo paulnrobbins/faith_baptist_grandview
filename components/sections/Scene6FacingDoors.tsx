@@ -132,7 +132,7 @@ export function Scene6FacingDoors() {
           </figcaption>
         </figure>
 
-        {/* CONTACT BLOCK — email + phone + address + Facebook (per Paul) */}
+        {/* CONTACT BLOCK — email + phone + address + Facebook + Give */}
         <div
           data-s6="contact"
           className="opacity-0 grid md:grid-cols-12 gap-10 md:gap-12 hairline-y py-12 md:py-16 mb-16 md:mb-24"
@@ -152,14 +152,25 @@ export function Scene6FacingDoors() {
                 {church.contact.phone}
               </a>
             </div>
-            <a
-              href={church.contact.facebook}
-              target="_blank"
-              rel="noreferrer"
-              className="caption-mono text-fg hairline-bottom self-start pb-1 hover:text-accent transition-colors mt-2"
-            >
-              Find us on Facebook ↗
-            </a>
+            <div className="flex flex-wrap items-center gap-5 mt-2">
+              <a
+                href={church.contact.donate}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 bg-accent text-bg px-5 py-3 rounded-full caption-mono hover:bg-fg transition-colors duration-300"
+              >
+                Give to Faith Baptist
+                <span aria-hidden>↗</span>
+              </a>
+              <a
+                href={church.contact.facebook}
+                target="_blank"
+                rel="noreferrer"
+                className="caption-mono text-fg hairline-bottom pb-1 hover:text-accent transition-colors"
+              >
+                Find us on Facebook ↗
+              </a>
+            </div>
           </div>
 
           <div className="md:col-span-5 flex flex-col gap-5">

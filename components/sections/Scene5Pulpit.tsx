@@ -242,6 +242,19 @@ export function Scene5Pulpit() {
                       </p>
                     ))}
                   </div>
+
+                  {m.donateUrl && (
+                    <a
+                      data-card-line
+                      href={m.donateUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="self-start mt-4 inline-flex items-center gap-2 bg-fg text-bg px-5 py-3 rounded-full caption-mono hover:bg-accent transition-colors duration-300"
+                    >
+                      {m.donateLabel ?? 'Support this ministry'}
+                      <span aria-hidden>↗</span>
+                    </a>
+                  )}
                 </div>
               </article>
             );

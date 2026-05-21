@@ -31,6 +31,7 @@ export const church = {
     phone: '+1 423-834-1877',
     phoneHref: 'tel:+14238341877',
     facebook: 'https://www.facebook.com/profile.php?id=61587382430656',
+    donate: 'https://www.zeffy.com/en-US/donation-form/donate-to-faith-baptist-church',
   },
   serviceTimes: [
     { day: 'Sunday',    time: '10:00 a.m.', label: 'Sunday School' },
@@ -164,6 +165,8 @@ export const scene5 = {
         'Following the rhythm of the seasons, participants hunt turkey in the spring, fish and camp in the summer, and hunt deer and trap during the fall and winter. Throughout the year, mentors walk alongside these young people, helping them grow in character, skill, and faith as they learn to see the Creator through His creation.',
         'Partnered with Awakening Adventures, a Christian wildlife sanctuary and camp.',
       ],
+      donateUrl: 'https://www.zeffy.com/en-US/donation-form/donate-to-special-sportsman-of-rhea-county',
+      donateLabel: 'Support Special Sportsman',
     },
     {
       slug: 'homeless-outreach',
@@ -292,6 +295,7 @@ export const nav = {
     { label: 'About',      href: '/about-us' },
     { label: 'Ministries', href: '/#ministries' },
     { label: 'Sermons',    href: 'https://www.facebook.com/profile.php?id=61587382430656', external: true },
+    { label: 'Give',       href: 'https://www.zeffy.com/en-US/donation-form/donate-to-faith-baptist-church', external: true },
   ],
 };
 

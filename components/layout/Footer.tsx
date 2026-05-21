@@ -45,6 +45,14 @@ export function Footer() {
             {church.contact.phone}
           </a>
           <a
+            href={church.contact.donate}
+            target="_blank"
+            rel="noreferrer"
+            className="caption-mono text-accent hover:opacity-80 transition-opacity"
+          >
+            Give ↗
+          </a>
+          <a
             href={church.contact.facebook}
             target="_blank"
             rel="noreferrer"
