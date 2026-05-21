@@ -115,7 +115,7 @@ export function Scene2Promise() {
       ref={rootRef}
       id="promise"
       data-scene="2"
-      className="relative py-[var(--space-section)] bg-bg/85 backdrop-blur-sm"
+      className="relative py-[var(--space-section)] bg-bg/90 backdrop-blur-sm"
     >
       <div className="container-editorial grid md:grid-cols-12 gap-8 md:gap-10">
         <div className="md:col-span-7 md:col-start-2 flex flex-col gap-8">
